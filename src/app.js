@@ -8,6 +8,7 @@ const geocode = require("./utils/geocode");
 const { error } = require("console");
 
 const app = express();
+const port = process.env.PORt || 3000;
 
 //Define Paths for Express Config
 const publicDirectoryPath = path.join(__dirname, "../views");
@@ -104,8 +105,8 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000.");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });
 
 // process.env.node_env;
