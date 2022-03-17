@@ -21,9 +21,14 @@ const forecast = (latitude, longitutde, callback) => {
         body.current.weather_descriptions +
           ", It is currently " +
           body.current.temperature +
-          " Degree out. And It feels like " +
+          " Degree out. " +
+          "And It feels like " +
           body.current.feelslike +
-          " Degree out"
+          " Degree out. " +
+          "The Current Date and Time in " +
+          body.location.country +
+          " is " +
+          body.location.localtime
       );
     }
   });
